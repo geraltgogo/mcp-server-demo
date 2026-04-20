@@ -26,7 +26,7 @@ def fetch_hitokoto(c: str) -> dict:
         params = {'c': c}
         response = httpx.get(url, params=params, timeout=10)
         response.raise_for_status()
-        return response.json()
+        return {k: response.json()[k] for k in ['hitokoto', 'from_who', 'from'] if k in response.json()}
     except httpx.RequestError as e:
         raise Exception(f"请求失败: {e}")
     except ValueError as e:
