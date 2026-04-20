@@ -32,5 +32,6 @@ def fetch_hitokoto(c: str) -> dict:
     except ValueError as e:
         raise Exception(f"解析响应失败: {e}")
 
+
 if __name__ == '__main__':
     mcp.run(transport='stdio')
