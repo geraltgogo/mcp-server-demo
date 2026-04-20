@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "hitokoto": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "/Users/geralt/VsCode_project/mcp-server-demo/",
+        "run",
+        "hitokoto.py"
+      ]
+    }
+  }
+}
